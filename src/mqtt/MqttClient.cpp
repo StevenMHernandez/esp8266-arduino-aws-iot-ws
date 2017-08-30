@@ -16,6 +16,7 @@
 
 #include "mqtt/MqttClient.h"
 
+// Keep a global reference of the instance to use in FPT callback
 MqttClient* MqttClient::instance = NULL;
 
 MqttParams::~MqttParams() {}

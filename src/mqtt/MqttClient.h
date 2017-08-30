@@ -23,7 +23,7 @@
 
 #include "ws/WebSocketClientAdapter.h"
 
-// TODO
+// TODO Refactor away config here
 #include "aws_iot_config.h"
 
 // (const char* topic, const char* payload)
@@ -96,7 +96,7 @@ class MqttClient {
 
     WebSocketClientAdapter& adapter;
     IPStack ipstack;
-    // TODO
+    // TODO Remove config params
     MQTT::Client<IPStack, Countdown, AWS_IOT_MQTT_TX_BUF_LEN, AWS_IOT_MQTT_NUM_SUBSCRIBE_HANDLERS> client;
     MqttParams& params;
 

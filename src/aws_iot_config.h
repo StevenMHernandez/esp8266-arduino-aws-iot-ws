@@ -17,7 +17,7 @@
 #ifndef SRC_SHADOW_IOT_SHADOW_CONFIG_H_
 #define SRC_SHADOW_IOT_SHADOW_CONFIG_H_
 
-#define AWS_REGION                     "eu-west-1"
+#define AWS_REGION                     "eu-central-1"
 
 #define AWS_IAM_KEY_ID                 "AKIAIOSFODNN7EXAMPLE"
 #define AWS_IAM_SECRET_KEY             "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
@@ -25,8 +25,8 @@
 #define AWS_IOT_ENDPOINT               "A2MBBEONHC9LUG"
 #define AWS_IOT_MQTT_HOST              "A2MBBEONHC9LUG.iot.eu-west-1.amazonaws.com" ///< Customer specific MQTT HOST. The same will be used for Thing Shadow
 #define AWS_IOT_MQTT_PORT              443 ///< default port for MQTT/S
-#define AWS_IOT_MQTT_CLIENT_ID         "wemos-id" ///< MQTT client ID should be unique for every device
-#define AWS_IOT_MY_THING_NAME 		     "wemos-name" ///< Thing Name of the Shadow this device is associated with
+#define AWS_IOT_MQTT_CLIENT_ID         "esp8266-id" ///< MQTT client ID should be unique for every device
+#define AWS_IOT_MY_THING_NAME          "esp8266-name" ///< Thing Name of the Shadow this device is associated with
 
 // MQTT config
 #define AWS_IOT_MQTT_TX_BUF_LEN 512 ///< Any time a message is sent out through the MQTT layer. The message is copied into this buffer anytime a publish is done. This will also be used in the case of Thing Shadow

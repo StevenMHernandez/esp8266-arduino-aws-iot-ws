@@ -41,8 +41,6 @@ class ConnectionParams : public WebSocketParams, public MqttParams
     unsigned int getVersion();
     char* getClientId();
 
-    // AWS/Shadow params
-
   private:
 
     AwsIotSigv4 sigv4;
