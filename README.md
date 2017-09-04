@@ -17,7 +17,8 @@ The library uses code from the following projects. License information can be fo
 - [Sander van de Graaf - aws-sdk-arduino](https://github.com/svdgraaf/aws-sdk-arduino)
 - [Fábio Toledo - aws-mqtt-websockets](https://github.com/odelot/aws-mqtt-websockets)
 - [Serge Zaitsev - JSMN](https://github.com/zserge/jsmn)
-- [Paho MQTT client]
+- [Paho MQTT client](https://www.eclipse.org)
+- [Stephan Brumme - SHA256](http://create.stephan-brumme.com/)
 
 In the case of missing license information, I took the liberty of adding it.
 
