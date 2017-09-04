@@ -2,6 +2,7 @@
   "name": "AWS IoT ESP8266 Arduino Websockets",
   "keywords": "AWS, IoT, SDK, ESP8266, Websockets, sigv4, Arduino",
   "description": "AWS IoT Device SDK for ESP8266/Arduino using Websockets and sigv4 authentication.",
+  "version": "0.1.2",
   "repository":
   {
     "type": "git",
