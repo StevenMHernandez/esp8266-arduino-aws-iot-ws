@@ -9,6 +9,9 @@
   },
   "frameworks": "arduino",
   "platforms": "espressif8266",
+  "build": {
+    "flags": "-I lib/aws-sdk-arduino",
+  },
   "dependencies": [
     {
       "name": "Paho",
