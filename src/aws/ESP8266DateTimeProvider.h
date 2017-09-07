@@ -22,7 +22,8 @@
 #define ESP8266DATETIMEPROVIDER_H_
 
 #include <ESP8266WiFi.h>
-#include <DeviceIndependentInterfaces.h>
+
+#include "aws-sdk-arduino/DeviceIndependentInterfaces.h"
 
 class ESP8266DateTimeProvider : public IDateTimeProvider
 {

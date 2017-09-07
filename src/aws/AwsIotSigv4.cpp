@@ -17,9 +17,8 @@
 /* Modified version of AwsClient2
  * https://github.com/awslabs/aws-sdk-arduino/blob/master/src/common/AWSClient2.h
  */
-
-#include <sha256.h>
-#include <Utils.h>
+#include "aws-sdk-arduino/sha256.h"
+#include "aws-sdk-arduino/Utils.h"
 
 #include "AwsIotSigv4.h"
 #include "aws_iot_config.h"

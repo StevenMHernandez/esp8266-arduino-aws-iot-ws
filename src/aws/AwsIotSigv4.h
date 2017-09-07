@@ -26,7 +26,8 @@
 
 #include <string.h>
 #include <stdio.h>
-#include <DeviceIndependentInterfaces.h>
+
+#include "aws-sdk-arduino/DeviceIndependentInterfaces.h"
 
 /* HTTP VERB */
 static const char* METHOD = "GET";
