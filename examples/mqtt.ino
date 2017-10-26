@@ -23,7 +23,7 @@ const char *AP_SSID = "[YOUR_SSID_NAME]";
 const char *AP_PASS = "[YOUR_SSID_PASS]";
 
 ESP8266DateTimeProvider dtp;
-AwsIotSigv4 sigv4(&dtp);
+AwsIotSigv4 sigv4(&dtp); // custom connection parameters can be passed in here
 ConnectionParams cp(sigv4);
 WebSocketClientAdapter adapter(cp);
 MqttClient client(adapter, cp);

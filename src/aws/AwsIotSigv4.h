@@ -68,7 +68,13 @@ static const int CR_LEN = 400;
 class AwsIotSigv4
 {
   public:
-    AwsIotSigv4(IDateTimeProvider* dtp);
+    AwsIotSigv4(IDateTimeProvider* dtp,
+                char *region = (char *) AWS_REGION,
+                char *endpoint = (char *) AWS_IOT_ENDPOINT,
+                char *mqttHost = (char *) AWS_IOT_MQTT_HOST,
+                int mqttPort = AWS_IOT_MQTT_PORT,
+                char *iamKeyId = (char *) AWS_IAM_KEY_ID,
+                char *iamSecretKey = (char *) AWS_IAM_SECRET_KEY);
     ~AwsIotSigv4();
 
     /*

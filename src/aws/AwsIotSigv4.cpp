@@ -23,14 +23,20 @@
 #include "AwsIotSigv4.h"
 #include "aws_iot_config.h"
 
-AwsIotSigv4::AwsIotSigv4(IDateTimeProvider* dtp) :
-    awsRegion(AWS_REGION),
-    awsEndpoint(AWS_IOT_ENDPOINT),
-    awsHost(AWS_IOT_MQTT_HOST),
-    awsPort(AWS_IOT_MQTT_PORT),
-    awsKeyId(AWS_IAM_KEY_ID),
-    awsSecretKey(AWS_IAM_SECRET_KEY),
-    dateTimeProvider(dtp)
+AwsIotSigv4::AwsIotSigv4(IDateTimeProvider *dtp,
+                         char *region,
+                         char *endpoint,
+                         char *mqttHost,
+                         int mqttPort,
+                         char *iamKeyId,
+                         char *iamSecretKey) :
+        awsRegion(region),
+        awsEndpoint(endpoint),
+        awsHost(mqttHost),
+        awsPort(mqttPort),
+        awsKeyId(iamKeyId),
+        awsSecretKey(iamSecretKey),
+        dateTimeProvider(dtp)
 {
 }
 
