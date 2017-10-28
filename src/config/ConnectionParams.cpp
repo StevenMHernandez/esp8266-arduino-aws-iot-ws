@@ -31,12 +31,12 @@ ConnectionParams::~ConnectionParams()
 
 char* ConnectionParams::getHost()
 {
-  return AWS_IOT_MQTT_HOST;
+  return sigv4.awsHost;
 }
 
 unsigned int ConnectionParams::getPort()
 {
-  return AWS_IOT_MQTT_PORT;
+  return sigv4.awsPort;
 }
 
 char* ConnectionParams::getPath()

@@ -69,12 +69,12 @@ class AwsIotSigv4
 {
   public:
     AwsIotSigv4(IDateTimeProvider* dtp,
-                char *region = (char *) AWS_REGION,
-                char *endpoint = (char *) AWS_IOT_ENDPOINT,
-                char *mqttHost = (char *) AWS_IOT_MQTT_HOST,
-                int mqttPort = AWS_IOT_MQTT_PORT,
-                char *iamKeyId = (char *) AWS_IAM_KEY_ID,
-                char *iamSecretKey = (char *) AWS_IAM_SECRET_KEY);
+                char *region,
+                char *endpoint,
+                char *mqttHost,
+                int mqttPort,
+                char *iamKeyId,
+                char *iamSecretKey);
     ~AwsIotSigv4();
 
     /*
@@ -98,8 +98,6 @@ class AwsIotSigv4
      */
     size_t createPath(char** out);
 
-  private:
-
     /* Region, e.g. "us-east-1" in "A2MBBEONHC9LUG.iot.us-east-1.amazonaws.com" */
     char* awsRegion;
 
@@ -118,6 +116,7 @@ class AwsIotSigv4
     /* The user's AWS Secret Key for accessing the AWS Resource. */
     char* awsSecretKey;
 
+  private:
     /* Used to keep track of time. */
     IDateTimeProvider* dateTimeProvider;
 
@@ -133,11 +132,11 @@ class AwsIotSigv4
 
     /* Fourth and last step of sigv4 signing, divided up in 2 methods
      * Add signature to request */
-     void addSignatureToQueryString(char* out, char* signature);
-     void addSignatureQSToRequest(char* out, char* qs);
+    void addSignatureToQueryString(char* out, char* signature);
+    void addSignatureQSToRequest(char* out, char* qs);
 
-     /* Calculate the size of the final request string based on queryString */
-     int getRequestLength(char* queryString);
+    /* Calculate the size of the final request string based on queryString */
+    int getRequestLength(char* queryString);
 
     /* Calculate the size of the credential scope string */
     int getCredentialScopeLength();

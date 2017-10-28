@@ -22,8 +22,16 @@
 const char *AP_SSID = "[YOUR_SSID_NAME]";
 const char *AP_PASS = "[YOUR_SSID_PASS]";
 
+// See `src/aws_iot_config.h` for formatting
+char *region = (char *) "[YOUR_AWS_REGION]";
+char *endpoint = (char *) "[YOUR_AWS_IOT_ENDPOINT]";
+char *mqttHost = (char *) "[YOUR_AWS_IOT_MQTT_HOST]";
+int mqttPort = "[YOUR_AWS_IOT_MQTT_PORT]";
+char *iamKeyId = (char *) "[YOUR_AWS_IAM_KEY_ID]";
+char *iamSecretKey = (char *) "[YOUR_AWS_IAM_SECRET_KEY]";
+
 ESP8266DateTimeProvider dtp;
-AwsIotSigv4 sigv4(&dtp); // custom connection parameters can be passed in here
+AwsIotSigv4 sigv4(&dtp, region, endpoint, mqttHost, mqttPort, iamKeyId, iamSecretKey);
 ConnectionParams cp(sigv4);
 WebSocketClientAdapter adapter(cp);
 MqttClient client(adapter, cp);
